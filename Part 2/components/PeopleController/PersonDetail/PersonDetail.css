@@ -1,0 +1,21 @@
+.card__user-card-container {
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-family: Helvetica;
+  margin: 3px;
+}
+
+.card__user-card-container:hover {
+  box-shadow: 3px 3px 3px;
+}
+
+.card__hidden-content {
+  display: none;
+}
+
+.card__details-btn {
+  background-color: #dedede;
+  padding: 6px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,26 @@
+<template id="people-list-template">
+  <style>
+    .people-list__container {
+      border: 1px solid black;
+    }
+
+    .people-list__list {
+      list-style: none
+    }
+
+    .people-list__name {
+      cursor: pointer;
+    }
+
+    .people-list__list>li {
+      font-size: 20px;
+      font-family: Helvetica;
+      color: #000000;
+      text-decoration: none;
+    }
+  </style>
+  <div class="people-list__container">
+    <ul class="people-list__list"></ul>
+  </div>
+</template>
+<script src="/components/PeopleController/PeopleList/PeopleList.js"></script>
