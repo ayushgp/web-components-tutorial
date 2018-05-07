@@ -16,6 +16,10 @@
   display: none;
 }
 
+.card__block-content {
+  display: block !important;
+}
+
 .card__details-btn {
   background-color: #dedede;
   padding: 6px;
