@@ -21,8 +21,8 @@ class UserCard extends HTMLElement {
     const instance = template.content.cloneNode(true);
     shadowRoot.appendChild(instance);
 
-    // Extract the attribute user-id from our element. 
-    // Note that we are going to specify our cards like: 
+    // Extract the attribute user-id from our element.
+    // Note that we are going to specify our cards like:
     // <user-card user-id="1"></user-card>
     const userId = this.getAttribute('user-id');
 
@@ -54,8 +54,12 @@ class UserCard extends HTMLElement {
   toggleCard() {
     let elem = this.shadowRoot.querySelector('.card__hidden-content');
     let btn = this.shadowRoot.querySelector('.card__details-btn');
-    btn.innerHTML = elem.style.display == 'none' ? 'Less Details' : 'More Details';
-    elem.style.display = elem.style.display == 'none' ? 'block' : 'none';
+
+    // if elem has "card __block-content" class, remove class, otherwise add it.
+    elem.classList.toggle('card__block-content');
+    // if elem has "card __block-content" class, the text of button will be "Less Details",
+    // otherwise will be "More Details"
+    btn.innerHTML = elem.classList.contains('card__block-content') ? 'Less Details' : 'More Details';
   }
 }
 
